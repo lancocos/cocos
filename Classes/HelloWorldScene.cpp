@@ -129,6 +129,14 @@ bool HelloWorld::init()
 	auto rt = RotateBy::create(10.0f, Vec3(0,100, 100));
 	lab1->runAction(mb);
 	lab1->runAction(rt);
+
+	TTFConfig ttfconf;
+	ttfconf.fontFilePath = "fonts/Marker Felt.ttf";
+	ttfconf.fontSize = 20;
+	auto m1 = Label::createWithTTF(ttfconf, "lancocos@gmail.com");
+	m1->setPosition(Vec2(300, 50));
+	m1->setColor(Color3B(Color3B::RED ));
+	this->addChild(m1);
     return true;
 }
 
