@@ -121,6 +121,14 @@ bool HelloWorld::init()
 		this->graySprite(sprite);
         this->addChild(sprite, 0);
     }
+
+	auto lab1 = Label::createWithTTF("hello world","fonts/Marker Felt.ttf",30);
+	lab1->setPosition(Vec2(80, 200));
+	this->addChild(lab1);
+	auto mb = MoveTo::create(10.0f,Vec2(400,0));
+	auto rt = RotateBy::create(10.0f, Vec3(0,100, 100));
+	lab1->runAction(mb);
+	lab1->runAction(rt);
     return true;
 }
 
