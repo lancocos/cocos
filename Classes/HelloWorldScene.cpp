@@ -137,6 +137,14 @@ bool HelloWorld::init()
 	m1->setPosition(Vec2(300, 50));
 	m1->setColor(Color3B(Color3B::RED ));
 	this->addChild(m1);
+
+	auto i1 = MenuItemImage::create("CloseNormal.png","CloseSelected.png", CC_CALLBACK_1(HelloWorld::menuCloseCallback,this));
+	auto i2 = MenuItemImage::create("CloseNormal.png", "CloseSelected.png", CC_CALLBACK_1(HelloWorld::menuCloseCallback, this));
+
+
+	auto memu = Menu::create(i1, i2, NULL);
+	menu->setPosition(Vec2(200, 30));
+	this->addChild(menu);
     return true;
 }
 
