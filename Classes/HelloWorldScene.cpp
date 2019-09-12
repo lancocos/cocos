@@ -142,9 +142,9 @@ bool HelloWorld::init()
 	auto i2 = MenuItemImage::create("CloseNormal.png", "CloseSelected.png", CC_CALLBACK_1(HelloWorld::menuCloseCallback, this));
 
 
-	auto memu = Menu::create(i1, i2, NULL);
-	menu->setPosition(Vec2(200, 30));
-	this->addChild(menu);
+	auto menu1 = Menu::create(i1,i2, NULL);
+	menu1->setPosition(Vec2(200, 30));
+	this->addChild(menu1);
     return true;
 }
 
@@ -167,6 +167,7 @@ void HelloWorld::draw(cocos2d::Renderer *renderer, const cocos2d::Mat4 &transfor
 	renderer->addCommand(&_customCommand);
 }
 void HelloWorld::onDraw(const cocos2d::Mat4& transform, uint32_t flags) {
+	return;
 	auto glProgram = getGLProgram();
 	glProgram->use();
 	glProgram->setUniformsForBuiltins();
