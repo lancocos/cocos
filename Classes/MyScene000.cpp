@@ -2,6 +2,7 @@
 #include "cocos2d.h"
 //#include "LayerScene001.h"
 #include "Hello.h"
+#include "ui/CocosGUI.h"
 USING_NS_CC;
 
 Scene* MyScene000::createScene() {
@@ -41,10 +42,16 @@ bool MyScene000::init() {
 	myLabel->setPosition(Vec2(150, 200));
 	myLabel->enableGlow(Color4B::YELLOW);
 	this->addChild(myLabel);
-	auto func = []() {CCLOG("ADSD");};
+	auto func = CallFunc::create([]() {CCLOG("##");});
 	auto label1 = LabelTTF::create("stop","Arial",14);
-	auto mux = MenuItemLabel::create(label1);
-	auto mmm = Menu::create(mux, NULL);
+	auto mux = MenuItemLabel::create(label1, [&](Ref *sender) {
+		CCLOG("adasda");
+	});
+	auto label2 = LabelTTF::create("option", "Arial", 20);
+	auto mitem2 = MenuItemLabel::create(label2, [&](Ref *psender) {
+		CCLOG("option");
+	});
+	auto mmm = Menu::create(mux, mitem2, NULL);
 	mmm->setPosition(Vec2(300, 200));
 	this->addChild(mmm);
 
