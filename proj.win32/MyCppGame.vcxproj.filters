@@ -24,6 +24,12 @@
     <ClCompile Include="..\Classes\MyScene000.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\LayerScene001.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Hello.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -36,6 +42,12 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\MyScene000.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\LayerScene001.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Hello.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
