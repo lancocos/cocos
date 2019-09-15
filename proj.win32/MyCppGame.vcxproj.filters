@@ -56,4 +56,10 @@
       <Filter>resource</Filter>
     </ResourceCompile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Resources\markerFelt-hd.fnt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Resources\markerFelt-hd.png" />
+  </ItemGroup>
 </Project>
