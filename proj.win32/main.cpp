@@ -38,5 +38,6 @@ int WINAPI _tWinMain(HINSTANCE hInstance,
 
     // create the application instance
     AppDelegate app;
+	CCLOG("before run...");
     return Application::getInstance()->run();
 }

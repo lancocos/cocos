@@ -24,7 +24,7 @@
 
 #include "HelloWorldScene.h"
 #include "SimpleAudioEngine.h"
-
+#include "MyScene000.h"
 USING_NS_CC;
 
 Scene* HelloWorld::createScene()
@@ -138,11 +138,11 @@ bool HelloWorld::init()
 	m1->setColor(Color3B(Color3B::RED ));
 	this->addChild(m1);
 
-	auto i1 = MenuItemImage::create("CloseNormal.png","CloseSelected.png", CC_CALLBACK_1(HelloWorld::menuCloseCallback,this));
-	auto i2 = MenuItemImage::create("CloseNormal.png", "CloseSelected.png", CC_CALLBACK_1(HelloWorld::menuCloseCallback, this));
+	//auto i1 = MenuItemImage::create("CloseNormal.png","CloseSelected.png", CC_CALLBACK_1(HelloWorld::menuCloseCallback,this));
+	auto i2 = MenuItemImage::create("CloseNormal.png", "CloseSelected.png", CC_CALLBACK_1(HelloWorld::toSecondScene, this));
 
 
-	auto menu1 = Menu::create(i1,i2, NULL);
+	auto menu1 = Menu::create(i2, NULL);
 	menu1->setPosition(Vec2(200, 30));
 	this->addChild(menu1);
     return true;
@@ -210,4 +210,12 @@ void HelloWorld::graySprite(Sprite * sp) {
 	p->link();
 	p->updateUniforms();
 	sp->setShaderProgram(p);
+}
+
+void HelloWorld::toSecondScene(cocos2d::Ref* pSender) {
+	CCLOG("DASDASD");
+	auto director = Director::getInstance();
+	
+	auto s = MyScene000::create();
+	director->replaceScene(s);
 }

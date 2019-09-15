@@ -42,6 +42,7 @@ public:
 	virtual void draw(cocos2d::Renderer *renderer, const cocos2d::Mat4 &transform, uint32_t flags) override;
 	void onDraw(const cocos2d::Mat4& transform, uint32_t flags);
 	void graySprite(cocos2d::Sprite*);
+	void toSecondScene(cocos2d::Ref* pSender);
 
 private:
 	cocos2d::CustomCommand _customCommand;
