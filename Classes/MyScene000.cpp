@@ -54,7 +54,12 @@ bool MyScene000::init() {
 	auto mmm = Menu::create(mux, mitem2, NULL);
 	mmm->setPosition(Vec2(300, 200));
 	this->addChild(mmm);
-
+	auto btn = cocos2d::ui::Button::create("Button_Normal.png","Button_Press.png","Button_disabled.png");
+	btn->setTitleText("click me!");
+	btn->setPosition(Vec2(400, 20));
+	btn->setSize(Size(50, 30));
+	btn->setColor(Color3B::RED);
+	this->addChild(btn);
 	return true;
 }
 void MyScene000::toScene(cocos2d::Ref* pSender) {

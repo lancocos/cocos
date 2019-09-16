@@ -61,5 +61,10 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\Resources\markerFelt-hd.png" />
+    <Image Include="..\Resources\CheckBox_Disable.png" />
+    <Image Include="..\Resources\CheckBox_Normal.png" />
+    <Image Include="..\Resources\CheckBox_Press.png" />
+    <Image Include="..\Resources\CheckBoxNode_Disable.png" />
+    <Image Include="..\Resources\CheckBoxNode_Normal.png" />
   </ItemGroup>
 </Project>
