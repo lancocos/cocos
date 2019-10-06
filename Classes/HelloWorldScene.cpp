@@ -24,7 +24,7 @@
 
 #include "HelloWorldScene.h"
 #include "SimpleAudioEngine.h"
-#include "MyScene000.h"
+//#include "MyScene000.h"
 USING_NS_CC;
 
 Scene* HelloWorld::createScene()
@@ -48,7 +48,7 @@ bool HelloWorld::init()
     {
         return false;
     }
-
+	return false;
     auto visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
 
@@ -213,9 +213,9 @@ void HelloWorld::graySprite(Sprite * sp) {
 }
 
 void HelloWorld::toSecondScene(cocos2d::Ref* pSender) {
-	CCLOG("DASDASD");
+
 	auto director = Director::getInstance();
 	
-	auto s = MyScene000::create();
-	director->replaceScene(s);
+	//auto s = MyScene000::create();
+	//director->replaceScene(s);
 }

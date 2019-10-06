@@ -3,6 +3,7 @@
 //#include "LayerScene001.h"
 #include "Hello.h"
 #include "ui/CocosGUI.h"
+
 USING_NS_CC;
 
 Scene* MyScene000::createScene() {
@@ -15,8 +16,9 @@ bool MyScene000::init() {
 	if (!Scene::initWithPhysics()) {
 		return false;
 	}
+	return true;
 	auto size = Director::getInstance()->getVisibleSize();
-	CCLOG("DADSADASDASDASD");
+
 	auto item1 = MenuItemImage::create("CloseNormal.png", "CloseSelected.png", CC_CALLBACK_1(MyScene000::toScene, this));
 	auto mu = Menu::create(item1, NULL);
 	mu->setPosition(Vec2(size.width / 2, size.height / 2));
@@ -42,14 +44,16 @@ bool MyScene000::init() {
 	myLabel->setPosition(Vec2(150, 200));
 	myLabel->enableGlow(Color4B::YELLOW);
 	this->addChild(myLabel);
-	auto func = CallFunc::create([]() {CCLOG("##");});
+	auto func = CallFunc::create([]() {});
 	auto label1 = LabelTTF::create("stop","Arial",14);
 	auto mux = MenuItemLabel::create(label1, [&](Ref *sender) {
-		CCLOG("adasda");
+		
+
 	});
 	auto label2 = LabelTTF::create("option", "Arial", 20);
 	auto mitem2 = MenuItemLabel::create(label2, [&](Ref *psender) {
-		CCLOG("option");
+		//auto s = ShakeScreen::createScene();
+		//Director::getInstance()->replaceScene(s);
 	});
 	auto mmm = Menu::create(mux, mitem2, NULL);
 	mmm->setPosition(Vec2(300, 200));
@@ -63,7 +67,7 @@ bool MyScene000::init() {
 	return true;
 }
 void MyScene000::toScene(cocos2d::Ref* pSender) {
-	CCLOG("CLOSE ITEM");
+
 	auto director = Director::getInstance();
 	auto s = MyScene000::create();
 	Director::getInstance()->replaceScene(TransitionFlipX::create(2, s));

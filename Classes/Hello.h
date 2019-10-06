@@ -4,7 +4,7 @@
 USING_NS_CC;
 class Hello :public Scene {
 public:
-	static cocos2d::Scene* createScene();
+	static Scene* createScene();
 	virtual bool init();
 	CREATE_FUNC(Hello);
 };
