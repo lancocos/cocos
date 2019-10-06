@@ -56,6 +56,14 @@ bool Hello::init() {
 			}
 		}
 	}
+	if (doc.HasMember("sprites")) {
+		rapidjson::Value& sp = doc["sprites"];
+		if (sp.IsArray && sp.Size() > 0) {
+			for (int i = 0; i < sp.Size(); i++) {
+				rapidjson::Value& spv = doc["sprite"][i];
+			}
+		}
+	}
 	
   user->showUserData();
 	return true;

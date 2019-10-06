@@ -3,5 +3,15 @@
 	"age":20,
 	"skills":[
 		"cocos2dx","unity3d","unreal"
-	]
+	],
+	"sprites":[{
+			"img":"i1.png",
+			"pos":{"x":100,"y":200}
+	},{
+			"img":"i1.png",
+			"pos":{"x":200,"y":200}
+	},{
+			"img":"i1.png",
+			"pos":{"x":300,"y":200}
+	}]
 }
