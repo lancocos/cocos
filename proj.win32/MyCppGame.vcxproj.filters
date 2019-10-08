@@ -72,5 +72,11 @@
     <Image Include="..\Resources\CheckBox_Press.png" />
     <Image Include="..\Resources\CheckBoxNode_Disable.png" />
     <Image Include="..\Resources\CheckBoxNode_Normal.png" />
+    <Image Include="..\Resources\loadingbar.png" />
+    <Image Include="..\Resources\Slider_Back.png" />
+    <Image Include="..\Resources\Slider_PressBar.png" />
+    <Image Include="..\Resources\SliderNode_Disable.png" />
+    <Image Include="..\Resources\SliderNode_Normal.png" />
+    <Image Include="..\Resources\SliderNode_Press.png" />
   </ItemGroup>
 </Project>

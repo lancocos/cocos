@@ -7,7 +7,7 @@
 USING_NS_CC;
 
 Scene* MyScene000::createScene() {
-	auto s = Scene::create();
+	auto  const s  = Scene::create();
 	
 	return MyScene000::create();
 }
@@ -17,7 +17,7 @@ bool MyScene000::init() {
 		return false;
 	}
 	return true;
-	auto size = Director::getInstance()->getVisibleSize();
+	auto const size = Director::getInstance()->getVisibleSize();
 
 	auto item1 = MenuItemImage::create("CloseNormal.png", "CloseSelected.png", CC_CALLBACK_1(MyScene000::toScene, this));
 	auto mu = Menu::create(item1, NULL);
@@ -68,7 +68,7 @@ bool MyScene000::init() {
 }
 void MyScene000::toScene(cocos2d::Ref* pSender) {
 
-	auto director = Director::getInstance();
+	auto const director = Director::getInstance();
 	auto s = MyScene000::create();
 	Director::getInstance()->replaceScene(TransitionFlipX::create(2, s));
 }

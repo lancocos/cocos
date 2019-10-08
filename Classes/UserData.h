@@ -2,7 +2,8 @@
 #define USER_DATA__H
 #include <iostream>
 #include <vector>
-class UserData {
+#include <cocos2d.h>
+class UserData:public cocos2d::Ref{
 	private:
 		std::string name;
 		int age;

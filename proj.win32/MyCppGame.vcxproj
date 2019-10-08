@@ -189,7 +189,13 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)\Resources\" /D /E /I /F /Y
     <Image Include="..\Resources\CheckBox_Disable.png" />
     <Image Include="..\Resources\CheckBox_Normal.png" />
     <Image Include="..\Resources\CheckBox_Press.png" />
+    <Image Include="..\Resources\loadingbar.png" />
     <Image Include="..\Resources\markerFelt-hd.png" />
+    <Image Include="..\Resources\SliderNode_Disable.png" />
+    <Image Include="..\Resources\SliderNode_Normal.png" />
+    <Image Include="..\Resources\SliderNode_Press.png" />
+    <Image Include="..\Resources\Slider_Back.png" />
+    <Image Include="..\Resources\Slider_PressBar.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
